@@ -1,20 +1,12 @@
 #include <stdio.h>
-#include <string.h>
-
-int main()
+/**
+ * main - print the stringsin puts function
+ * Description: using th main function this prints
+ * "programming is  like building a multilingual puzzle"
+ * return: 0
+ */
+int main(void)
 {
-       char str1[] ="\"Programming is like building a multilingual puzzle"
-       puts(str1);
-       return 0;
+	puts("\"programing is like building a multilingualpuzzle");
+	return (0)
 }
-
-
-
-
-
-
-
-
-
-
-
