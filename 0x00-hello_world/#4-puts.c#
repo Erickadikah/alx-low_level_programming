@@ -1,4 +1,4 @@
-#include <stdio.h>
++#include <stdio.h>
 /**
  * main - print the stringsin puts function
  * Description: using th main function this prints
@@ -8,5 +8,5 @@
 int main(void)
 {
 	puts("\"programing is like building a multilingualpuzzle");
-	return (0);
+	return (0)
 }
