@@ -1,4 +1,4 @@
-#include <studio.h>
+#include <stdio.h>
 
 /**
  * main - prints the alphabet in lowercase,
@@ -14,7 +14,6 @@ int main(void)
 		if (ch != 'e' && ch != 'q')
 		{
 			putchar(ch);
-
 		}
 		ch++;
 	}
