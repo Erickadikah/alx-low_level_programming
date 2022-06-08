@@ -1,21 +1,15 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
- * main - Check description
- * Description: It prints the word _putchar, followed by a new line.
- * Return: 0.
+ * print_alphabet - Check description
+ * Description: It prints the alphabet in lowercase followed by a new line
+ * Return: Nothing.
  */
-int main(void)
+void print_alphabet(void)
 {
-	char word[8] = "_putchar";
-	int i;
+	char i;
 
-	for (i = 0; i < 8; i++)
-	{
-		_putchar(word[i]);
-	}
+	for (i = 'a'; i <= 'z'; i++)
+		_putchar(i);
 	_putchar('\n');
-
-	return (0);
 }
