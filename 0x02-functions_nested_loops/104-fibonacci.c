@@ -5,7 +5,7 @@
  * followed by a new line
  * Return: ALways 0 (Success)
  */
-Return: ALways 0 (Success)
+int main(void)
 {
 	unsigned long int i, j, k, j1, j2, k1, k2;
 
@@ -28,8 +28,8 @@ Return: ALways 0 (Success)
 
 	for (i = 92; i < 99; ++i)
 	{
-		printf(", %lu", k1 + (k2 / 1000000000))
-			printf("%lu", k2 % 1000000000);
+		printf(", %lu", k1 + (k2 / 1000000000));
+		printf("%lu", k2 % 1000000000);
 		k1 = k1 + j1;
 		j1 = k1 - j1;
 		k2 = k2 + j2;
