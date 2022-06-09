@@ -1,31 +1,27 @@
 #include <stdio.h>
-
 /**
- * main - prints all possible combinations of two two-digit numbers
- * Return: Always 0 (Success)
+ * main - main block
+ * Description: computes and prints the sum of all the multiples of 3 or
+ * 5 below 1024 (excluded), followed by a new line
+ * Return: 0
  */
 int main(void)
 {
-	int i, j;
+	int i = 0;
+	long int a = 0, b = 1, next;
 
-	for (i = 0; i < 100; i++)
+	while (i < 50)
 	{
-		for (j = 0; j < 100; j++)
+		next = a + b;
+		a = b;
+		b = next;
+		printf("%lu", next);
+
+		if (i < 49)
 		{
-			if (i < j)
-			{
-				putchar((i / 10) + 48);
-				putchar((i % 10) + 48);
-				putchar(' ');
-				putchar((j / 10) + 48);
-				putchar((j % 10) + 48);
-				if (i != 98 || j != 99)
-				{
-					putchar(',');
-					putchar(' ');
-				}
-			}
+			printf(", ");
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
