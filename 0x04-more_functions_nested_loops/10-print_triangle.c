@@ -1,18 +1,29 @@
-#ifndef FILE_HOLBERTON
-#define FILE_HOLBERTON
+#include "main.h"
 
-int _putchar(char c);
-int _isupper(int c);
-int _isdigit(int c);
-int mul(int a, int b);
-void print_number(int n);
-void print_most_numbers(void);
-void more_numbers(void);
-void print_line(int n);
-void print_diagonal(int n);
-void print_square(int size);
-void print_triangle(int size);
-void print_number(int n);
+/**
+ * print_triangle -  a function that prints a triangle, followed by a new line.
+ * @size: An input integer
+ * Return: Always 0
+ */
+void print_triangle(int size)
+{
+	int i = 0, j, n = size - 1;
 
-
-#endif
+	if (size > 0)
+	{
+		for (; i < size; i++)
+		{
+			for (j = 0; j < size; j++)
+			{
+				if (j < n)
+					_putchar(' ');
+				else
+					_putchar('#');
+			}
+			n--;
+			_putchar('\n');
+		}
+	}
+	else
+		_putchar('\n');
+}
