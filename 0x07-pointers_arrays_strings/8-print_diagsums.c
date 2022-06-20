@@ -27,4 +27,4 @@ void print_diagsums(int *a, int size)
 	}
 
 	printf("%d, %d\n", tl, tr);
-}	
+}
