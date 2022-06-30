@@ -2,25 +2,42 @@
 #include <stdlib.h>
 
 /**
- * array_range - creates an array of integers from min to max
- * @min: minimum int in array
- * @max: maximum int in array
- * Return: pointer to array or null
+ * string_nconcat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * @n: limit of s2
+ * Return: pointer to the new space in memory or null
  */
 
-int *array_range(int min, int max)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 {
-	int *p;
-	int a, size;
+	char *strDup;
+	int a;
+	unsigned int b;
 
-	if (min > max)
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	a = 0;
+	while (s1[a] != '\0')
+		a++;
+	strDup = malloc(sizeof(char) * (a + n));
+	if (strDup == NULL)
 		return (NULL);
-	size = (max - min) + 1;
-	p = malloc(size * sizeof(*p));
-	if (p == NULL)
-		return (NULL);
-	for (a = 0; a < size && min <= max; a++, min++)
-		*(p + a) = min;
-	return (p);
+
+	a = b = 0;
+	while (s1[a] != '\0')
+	{
+	strDup[a] = s1[a];
+	a++;
+	}
+	while (b < n && s2[b] != '\0')
+	{
+		strDup[a] = s2[b];
+		a++, b++;
+	}
+	strDup[a] = '\0';
+	return (strDup);
 }
