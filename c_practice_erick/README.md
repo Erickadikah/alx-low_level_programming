@@ -1,1 +1,1 @@
-my learning ways rick~
+variactic fuctions
