@@ -1,2 +1,2 @@
-dynamic liblary
-
+C - Dynamic libraries
+C
