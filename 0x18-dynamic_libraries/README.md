@@ -1,1 +1,1 @@
-c - dunamic libraries by erick adikah
+static liblaries
