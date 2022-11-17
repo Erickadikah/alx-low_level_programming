@@ -30,3 +30,4 @@
 <li>C - File I/O </li>
 <li>C - Simple Shell</li>
 <h3>Author</h3>
+<li>Erick adikah</li>
