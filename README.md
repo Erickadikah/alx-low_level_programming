@@ -24,7 +24,7 @@
 <li>C - More singly linked lists</li>
 <li>C - Doubly linked lists</li>
 <li>C - Stacks, Queues - LIFO, FIFO</li>
-<li>. C - Hash tables</li>
+<li>C - Hash tables</li>
 <li> C - Sorting algorithms & Big O </li>
 <h2>Low-level programming & Algorithm - Linux and Unix system programming</h2>
 <li>C - File I/O </li>
