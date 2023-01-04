@@ -6,42 +6,34 @@
  *@array : pointer to the first elememnt of the array to search.
  *@size: The number of the elememnt in the array.
  *@value: The value to the search for
- *
- *
  * Return: if the value is not present or array is NULL, -1.
- * othewise, the first index where the value is located.
- *
+ * othewise, the first index where the value is located
  * Description: Prints a value everytime it is compared in the array.
  */
-
 int binary_search(int *array, size_t size, int value)
 {
-	int i, right, left, mid;
+	int i, high, low, mid;
 
-	right = 0;
-	left = size - 1;
-	mid = (right + left) / 2;
+	if (!array)
+		return (-1);
+	low = 0;
+	high = size - 1;
 
-	while  (right <= left)
+	while  (low <= high)
 	{
-		if (array[mid] == value)
-			return (mid);
 		printf("Searching in array:");
-		for (i = right; i < left; i++)
+		for (i = low; i < high; i++)
 		{
 			printf("%d,", array[i]);
 		}
-		printf("%d\n", array[i]);
+		printf("%d\n", array[high]);
+		mid =  (high + low) / 2;
+		if (array[mid] == value)
+			return (mid);
 		if (array[mid] < value)
-		{
-			right = mid + 1;
-			mid = (right + left) / 2;
-		}
-		else
-		{
-			left = mid - 1;
-			mid = (right + left) / 2;
-		}
+			low =  mid + 1;
+		if (array[mid] > value)
+			high = mid - 1;
 	}
 	return (-1);
 }
