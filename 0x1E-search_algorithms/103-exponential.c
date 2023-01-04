@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * intepolation_search - searches for a value in arrray
+ * exponential_search - searches for a value in arrray
  * of integers
  *@array : pointer to the first elememnt of the array to search.
  *@size: The number of the elememnt in the array.
@@ -13,40 +13,42 @@
  *
  * Description: Prints a value everytime it is compared in the array.
  */
-int binary_search(int *array, size_t size, int value)
-{
-	int i, right, left, mid;
-
-	right = 0;
-	left = size - 1;
-	mid = (right + left) / 2;
-
-	while  (right <= left)
-	{
-		if (array[mid] == value)
-		    return (mid);
-		printf("Searching in array:");
-		for (i = right; i < left; i++)
-		{
-			printf("%d,", array[i]);
-		}
-		printf("%d\n", array[i]);
-		if (array[mid] < value)
-		{
-			right = mid + 1;
-			mid = (right + left) / 2;
-		}
-		else
-		{
-			left = mid - 1;
-			mid = (right + left) / 2;
-		}
-	}
-	return (-1);
-
 
 int exponential_search(int *array, size_t size, int value)
 {
-	int i;
-	if (array[i] == value)
-		return
+	size_t exp, low, high, i, mid;
+
+	if(!array)
+		return (-1);
+
+	exp = 1;
+	if (array[exp] == value)
+		return exp;
+	while ((array[exp] < value) && (exp < size))
+	{
+		printf("value checked array[%ld] = [%d]\n", exp, array[exp]);
+		exp *= 2;
+	}
+
+	low = exp / 2;
+	high = exp -1;
+	printf("value found between indexes [%ld] and [%ld]\n", low, high);
+
+	mid = (low + high) / 2;
+	while  (low <= high)
+	{
+		printf("Searching in array:");
+		for (i = low; i < high; i++)
+			printf("%d,", array[i]);
+		printf("%d\n", array[i]);
+
+		i = low + (high - low) / 2;
+		if (array[mid] == value)
+			return (mid);
+		if (array[mid] > value)
+			high = i - 1;
+		else
+			low = i + 1;
+	}
+	return (-1);
+}
