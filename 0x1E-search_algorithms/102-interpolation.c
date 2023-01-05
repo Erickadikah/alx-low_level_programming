@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
- * intepolation_search - searches for a value in arrray
+ * interpolation_search - searches for a value in arrray
  * of integers
  * @array : pointer to the first elememnt of the array to search.
  * @size: The number of the elememnt in the array.
