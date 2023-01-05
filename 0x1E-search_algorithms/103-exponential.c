@@ -39,8 +39,8 @@ int exponential_search(int *array, size_t size, int value)
 	{
 		printf("Searching in array:");
 		for (i = low; i < high; i++)
-			printf("%d,", array[i]);
-		printf("%d\n", array[i]);
+			printf(" %d,", array[i]);
+		printf(" %d\n", array[i]);
 
 		i = low + (high - low) / 2;
 		if (array[mid] == value)
