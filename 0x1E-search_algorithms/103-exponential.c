@@ -28,20 +28,22 @@ int exponential_search(int *array, size_t size, int value)
 	low = exp / 2;
 	high = exp - 1;
 	printf("value found between indexes [%ld] and [%ld]\n", low, high);
-	mid = (low + high) / 2;
+
 	while  (low <= high)
 	{
 		printf("Searching in array:");
 		for (i = low; i < high; i++)
+		{
 			printf(" %d,", array[i]);
+		}
 		printf(" %d\n", array[i]);
-		i = low + (high - low) / 2;
+		mid = (high + low) / 2;
 		if (array[mid] == value)
 			return (mid);
+		if (array[mid] < value)
+			low  = mid + 1;
 		if (array[mid] > value)
-			high = i - 1;
-		else
-			low = i + 1;
+			high = mid - 1;
 	}
 	return (-1);
 }
