@@ -46,17 +46,3 @@ int jump_search(int *array, size_t size, int value)
 	}
 	return (-1);
 }
-
-/**
- * min - checks the one that is smaller
- * @a: to be checked
- * @b: to be checked
- * Return: Either a or b the smaller between them
- */
-size_t min(size_t a, size_t b)
-{
-	if (b > a)
-		return (a);
-	else
-		return (b);
-}
