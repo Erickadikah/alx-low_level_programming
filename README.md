@@ -1,5 +1,5 @@
 <h2>Low-level programming & Algorithm - Hatching out</h2>
-<li>C - Hello, World</li>
+[C - Hello, World](./0x00-hello_world/)
 <li>C - Variables, if, else, while</li>
 <li>C - Functions, nested loops</li>
 <li>C - Debugging</li>
