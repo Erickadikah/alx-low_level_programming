@@ -1,6 +1,6 @@
 # Low-level programming & Algorithm - Hatching out
 
-* [0x00-hello_world](alx-low_level_programming)
+* [0x00-hello_world](./alx-low_level_programming/)
 
 * [0x01C - Variables, if, else, while](alx-low_level_programming)
 
