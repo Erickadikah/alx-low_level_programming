@@ -1,5 +1,5 @@
 <h2>Low-level programming & Algorithm - Hatching out</h2>
-[0x00-hello_world](./github/alx-low_level_programming/0x00-hello_world/)
+[0x00-hello_world](alx-low_level_programming)
 <li>C - Variables, if, else, while</li>
 <li>C - Functions, nested loops</li>
 <li>C - Debugging</li>
