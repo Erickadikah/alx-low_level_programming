@@ -1,7 +1,0 @@
-#include <studio.h>
-#include <studarg.h>
-
-int max(intnum_arg, ...);
-va_list arg
-
-
